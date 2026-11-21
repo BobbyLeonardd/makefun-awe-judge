@@ -2,14 +2,14 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY = `Mother sets the dough by the stove
-and folds the cloth over it.
-The stove ticks as it cools.
-Flour and water push at the bowl,
-patient as a field left fallow,
-doing slow work they have done
-in kitchens since there were kitchens.
-Morning will find it risen, and hers.`;
+const ENTRY = `The room has gone quiet around her breathing.
+The clock on the mantel stopped on Tuesday
+and nobody has wound it since.
+Dust goes down through the lamplight.
+Outside, the hill gives up a stone
+every few winters,
+and is a little lower
+than when the clock was made.`;
 
 const ENTRY_FILE = "entry.txt";
 const MIN_CODE_POINTS = 1;
