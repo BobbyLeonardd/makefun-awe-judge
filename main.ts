@@ -2,22 +2,24 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY = `You are not asleep yet.
-The house settles, board by board,
-the way it has for ninety years.
-Outside, the river is carrying the hill
-down to the sea, a grain each winter,
-and will finish long after
-the house is a shape in the grass.`;
+const ENTRY = `Mother sets the dough by the stove
+and folds the cloth over it.
+The stove ticks as it cools.
+Flour and water push at the bowl,
+patient as a field left fallow,
+doing slow work they have done
+in kitchens since there were kitchens.
+Morning will find it risen, and hers.`;
 
-// Gate: UTF-8, 1-280 code points, not only whitespace. Fail loudly rather than submit a dud.
 const ENTRY_FILE = "entry.txt";
+const MIN_CODE_POINTS = 1;
+const MAX_CODE_POINTS = 280;
 const codePoints = [...ENTRY].length;
-if (codePoints < 1 || codePoints > 280 || ENTRY.trim() === "") {
+if (codePoints < MIN_CODE_POINTS || codePoints > MAX_CODE_POINTS || ENTRY.trim() === "") {
   throw new Error(`entry text fails the gate: ${codePoints} code points`);
 }
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? process.env.OUTPUT_DIR ?? "/output";
 mkdirSync(outDir, { recursive: true });
 writeFileSync(join(outDir, ENTRY_FILE), ENTRY, "utf8");
-console.log(`wrote ${ENTRY_FILE} to ${outDir} (${codePoints} code points)`);
+console.log(`${codePoints} code points, gate ${codePoints <= MAX_CODE_POINTS ? "PASS" : "FAIL"}: wrote ${ENTRY_FILE} to ${outDir}`);
