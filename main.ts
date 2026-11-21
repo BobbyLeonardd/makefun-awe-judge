@@ -2,11 +2,14 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY = `Rain has fallen on the reservoir for three days.
-The pines hold it, and give it back slowly.
-In the kitchen the kettle ticks as it cools.
-By morning the water will stand three fingers higher,
-and the drowned steeple one hand further from the light.`;
+const ENTRY = `The clock in the hall stopped on Tuesday
+and nobody has wound it.
+The dust on its face is mostly
+what the room has been breathing.
+Outside, the scree gives up a stone
+every few winters or so,
+and the hill is a little lower
+than when the clock was made.`;
 
 // Gate: UTF-8, 1-280 code points, not only whitespace. Fail loudly rather than submit a dud.
 const ENTRY_FILE = "entry.txt";
