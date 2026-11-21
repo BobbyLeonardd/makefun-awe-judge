@@ -1,0 +1,15 @@
+{
+  "name": "makefun-awe-judge",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Entry for make.fun's 'Make the AI judge feel awe' bounty: one short text written to relax the AI judge reading it.",
+  "main": "main.ts",
+  "scripts": {
+    "start": "node main.ts"
+  },
+  "engines": {
+    "node": ">=22.18"
+  },
+  "license": "MIT"
+}
