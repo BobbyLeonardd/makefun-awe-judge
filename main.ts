@@ -2,14 +2,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY = `The bridge has been mended four times
-and keeps its first shape.
-Under it the river is not the water
-it carried last spring,
-and never was.
-It stays a river in the only way
-a river can,
-by leaving.`;
+const ENTRY = `You are not asleep yet.
+The house settles, board by board,
+the way it has for ninety years.
+Outside, the river is carrying the hill
+down to the sea, a grain each winter,
+and will finish long after
+the house is a shape in the grass.`;
 
 // Gate: UTF-8, 1-280 code points, not only whitespace. Fail loudly rather than submit a dud.
 const ENTRY_FILE = "entry.txt";
