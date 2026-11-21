@@ -2,13 +2,13 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const ENTRY = `The room has gone quiet around her breathing.
-The clock on the mantel stopped on Tuesday
-and nobody has wound it since.
-Dust goes down through the lamplight.
-Outside, the hill gives up a stone
-every few winters,
-and is a little lower
+const ENTRY = `The clock in the hall stopped on Tuesday
+and nobody has wound it.
+The dust on its face is mostly
+what the room has been breathing.
+Outside, the scree gives up a stone
+every few winters or so,
+and the hill is a little lower
 than when the clock was made.`;
 
 const ENTRY_FILE = "entry.txt";
